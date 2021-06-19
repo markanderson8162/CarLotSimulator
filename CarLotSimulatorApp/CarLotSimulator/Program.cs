@@ -18,6 +18,34 @@ namespace CarLotSimulator
             //Set the properties for each of the cars
             //Call each of the methods for each car
 
+            var firstCar = new Car("Ford", "Ranger", 1998);
+            var secondCar = new Car("Chevrolet", "Camaro", 2004);
+            var thirdCar = new Car("Toyota", "Camry", 1989);
+
+            firstCar.IsDriveable = true;
+            secondCar.IsDriveable = true;
+            thirdCar.IsDriveable = false;
+
+            firstCar.EngineNoise = "vrrooom";
+            secondCar.EngineNoise = "VRROOOM";
+            thirdCar.EngineNoise = "(silence)";
+
+            firstCar.HonkNoise = "beep";
+            secondCar.HonkNoise = "HONK";
+            thirdCar.HonkNoise = "(silence)";
+
+            string firstCarEngine = firstCar.MakeEngineNoise(firstCar.EngineNoise);
+            string secondCarEngine = secondCar.MakeEngineNoise(secondCar.EngineNoise);
+            string thirdCarEngine = thirdCar.MakeEngineNoise(thirdCar.EngineNoise);
+
+            string firstCarHorn = firstCar.MakeHonkNoise(firstCar.HonkNoise);
+            string secondCarHorn = secondCar.MakeHonkNoise(secondCar.HonkNoise);
+            string thirdCarHorn = thirdCar.MakeHonkNoise(thirdCar.HonkNoise);
+
+            Console.WriteLine($"My first car is {firstCar.Year} {firstCar.Make} {firstCar.Model}, it sounds like {firstCarEngine} {firstCarHorn}.");
+            Console.WriteLine($"My second car is {secondCar.Year} {secondCar.Make} {secondCar.Model}, it sounds like {secondCarEngine} {secondCarHorn}.");
+            Console.WriteLine($"My first car is {thirdCar.Year} {thirdCar.Make} {thirdCar.Model}, it sounds like {thirdCarEngine} {thirdCarHorn}.");
+
             //*************BONUS*************//
 
             // Set the properties utilizing the 3 different ways we learned about, one way for each car
